@@ -8,7 +8,7 @@ console.log(galleryItems);
 
 const makeGalleryItemsMarkup = (galleryitems) =>
     galleryitems.map(({ preview, original, description }) =>
-    ` <a class="gallery__item" href="${original}">
+    `<div><a class="gallery__item" href="${original}">
      <img class ="gallery__image"
           src = "${preview}"    
           alt = "${description}" 
