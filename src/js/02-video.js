@@ -12,16 +12,12 @@ function timeStop(timeupdate) {
 }
 
 const currentTime = localStorage.getItem('videoplayer-current-time');
+if (currentTime) {
+    player.setCurrentTime(currentTime);
+};
 
-player
-    .setCurrentTime(currentTime)
-    .then(function (_pause) {
-    })
-    .catch(function (error) {
-        switch (error.name) {
-            case 'RangeError':
-                break;
-            default:
-                break;
-        }
-    });
+
+
+
+
+
