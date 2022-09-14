@@ -27,10 +27,13 @@ function populationTextarea () {
    let savedMessage = localStorage.getItem(STORAGE__KEY);
    if(savedMessage){
     savedMessage = JSON.parse(savedMessage);
-    input.value = savedMessage.email;
-    textarea.value = savedMessage.message;
+    //input.value = savedMessage.email || "";
+    //textarea.value = savedMessage.message || "";
+    Object.entries(savedMessage).forEach(([name,value]) => {
+      form.elements[name].value = value;});
+    }
    }
-   }
+   
    
 
 
